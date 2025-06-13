@@ -1,0 +1,144 @@
+.cart-container {
+  display: flex;
+  width: 500px;
+  height: 400px;
+  border: 2px solid black;
+  position: relative;
+  top: 40px;
+  flex-direction: column;
+}
+
+.current-cart {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  height: 200px;
+  width: 470px;
+  left: 10px;
+  position: relative;
+  padding: 2px;
+  overflow: auto;
+}
+
+.item {
+  display: flex;
+  border: 1px solid black;
+  height: 50px;
+  margin: 2px;
+  justify-content: space-between;
+  padding: 2px;
+}
+
+.thumbnail-picture-container {
+  width: 100px;
+  height: 50px;
+}
+
+.thumbnail-picture {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.product-name {
+  font-weight: bold;
+  top: 15px;
+  position: relative;
+  margin-right: auto;
+}
+.product-price {
+  font-weight: bold;
+  top: 15px;
+  position: relative;
+}
+.total-price {
+  margin-left: auto;
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.quantity-conatiner {
+  display: flex;
+  margin-right: auto;
+  margin-top: 15px;
+  position: relative;
+  font-weight: bold;
+}
+
+.decrement-button {
+  height: 20px;
+  margin-right: 5px;
+  box-shadow: 1px 1px 2px rgba(12, 12, 12, 0.5);
+  border-radius: 20px 0 0 20px;
+  font-weight: bold;
+}
+
+.decrement-button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.increment-button {
+  height: 20px;
+  margin-left: 5px;
+  box-shadow: 1px 1px 2px rgba(12, 12, 12, 0.5);
+  border-radius: 0 20px 20px 0;
+  font-weight: bold;
+}
+
+.increment-button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.delete-button {
+  margin-left: 20px;
+  box-shadow: 2px 2px 5px rgba(247, 0, 0, 0.5);
+  background-color: rgba(247, 0, 0, 0.5);
+  border: 0.2px solid rgba(247, 0, 0, 0.5);
+  color: white;
+  height: 20px;
+}
+
+.delete-button:hover {
+  font-weight: bold;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.checkout-section {
+  display: flex;
+  position: relative;
+  top: 20px;
+  justify-content: space-between;
+}
+
+.product-listing-button {
+  background-color: blue;
+  color: white;
+  border-radius: 100% 10px 10px 100%;
+  width: 200px;
+  left: 30px;
+  position: relative;
+}
+
+.product-listing-button:hover {
+  cursor: pointer;
+  font-weight: bold;
+  transform: scale(1.2);
+}
+
+.checkout-button {
+  background-color: rgba(0, 255, 34, 0.5);
+  color: black;
+  border-radius: 10px 100% 100% 10px;
+  width: 200px;
+  right: 30px;
+  position: relative;
+}
+
+.checkout-button:hover {
+  cursor: pointer;
+  font-weight: bold;
+  transform: scale(1.2);
+}
