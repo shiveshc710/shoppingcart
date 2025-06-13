@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import "./LandingPage.css";
 import HeaderMenu from "../HeaderMenu/HeaderMenu";
+import Products from "../Products/Products";
+import { useSelector, useDispatch } from "react-redux";
+import { changeMenu } from "../../redux/slices/itemSlice";
+import ShoppingCart from "../ShoppingCart/ShoppingCart";
 
 export default function LandingPage() {
-  const [currentMenuOption, setCurrentMenuOption] = useState("home");
+  const currentMenu = useSelector((state) => state.item.currentMenu);
+  const dispatch = useDispatch();
+
   return (
     <>
       <div className="background">
@@ -16,7 +22,7 @@ export default function LandingPage() {
       <HeaderMenu />
 
       <div className="output-area">
-        {currentMenuOption === "home" && (
+        {currentMenu === "home" && (
           <>
             <h1>ShivZon</h1>
             <p>
@@ -28,9 +34,14 @@ export default function LandingPage() {
               value="Get Started!"
               type="button"
               className="get-started-button"
+              onClick={() => dispatch(changeMenu("products"))}
             />
           </>
         )}
+
+        {currentMenu === "products" && <Products />}
+
+        {currentMenu === "cart" && <ShoppingCart />}
       </div>
     </>
   );
